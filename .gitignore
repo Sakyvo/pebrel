@@ -1,0 +1,12 @@
+# 上游快照投递箱：随时整目录删换，不入库
+/upstream/
+
+# 构建产物（根 .cargo/config.toml 路由到根 .target/）
+/.target/
+
+# agent 工作目录
+.claude/
+.codex/
+.agents/
+.pi/
+.ace-tool/

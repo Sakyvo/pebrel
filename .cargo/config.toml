@@ -1,0 +1,4 @@
+[build]
+# 所有 cargo 产物（含依赖增量缓存）进根 .target/；
+# 在 src/ 下跑 cargo 时向上发现本配置，跨上游更新存活。
+target-dir = ".target"
