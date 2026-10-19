@@ -15,7 +15,7 @@
 - 构建 / 测试（在 `src/` 下执行，产物自动进根 `.target/`）：`cargo check` / `cargo test`
 - 上游架构门禁：`python scripts/check_architecture.py --base upstream-vX.Y.Z`（在 `src/` 下）
 - 上游更新：删除 `upstream/` 放入新源码 → `scripts/sync-upstream.ps1`
-- 推送 PR 材料：`git push -f origin main`（覆盖远端）→ 从 fork 向 Kuddev/pebrel 提 PR
+- 推送 PR 材料：`git push -f origin main`（覆盖远端）→ 从 fork 向 Kuddev/pebrel 提 PR；修复 PR 直接提，无需先开 feature issue（用户知情豁免上游 CONTRIBUTING 礼节）。
 
 ## 常驻法则
 - 修改只在 `src/` 做；写进 `upstream/` 的任何内容都会在下次同步时丢失。
