@@ -25,15 +25,15 @@ Status: review
 
 ## 人工观感验收清单（待用户执行）
 
-构建：`cargo build --release --locked -p nebula --bin pebrel --features gpui-shell`（产物 `../.target/release/pebrel.exe`）
-测试前注意：`%APPDATA%\Pebrel\pebrel_settings.txt` 若残留临时 `ui_font_family` 行，先删除再测。
+构建已就绪：`.target/.distribution/app/pebrel.exe`（本批 commit 5e94d06 构建，delivery.json = pending-manual-acceptance）；快捷方式 `K:\Projects\distribution\pebrel.lnk`。本机 settings 已预配置：`tab_font_family=Maple Mono Normal NF CN`（临时 `ui_font_family` 残留已删，其余 UI 保持默认 Geist）。
 
-1. 无 `tab_font_family` 键：侧栏/顶栏标签 = Geist（与官方 2.2.2 一致）
-2. 设置页 → 外观 → 高级 → 界面组："标签字体"行存在；输入/选择 `Maple Mono Normal NF CN` → 标签恢复等宽；设置页/对话框/其余 chrome 仍 Geist
+1. 无 `tab_font_family` 键时（可临时改名验证）：侧栏/顶栏标签 = Geist（与官方 2.2.2 一致）
+2. 标签字体行位于设置页 → 外观 → 高级 → 终端外观组，中文终端字体行下方；选择 `Maple Mono Normal NF CN` → 标签恢复等宽；设置页/对话框/其余 chrome 仍 Geist
 3. 标签字体输入框清空并回车 → 标签回落界面默认字体
 4. 终端区始终走 `font_family`/`font_family_cjk`，观感不受影响
 5. `tabs_position=top` 顶栏模式同样生效
-6. 设置页"恢复默认"清掉 tab_font_family 键（reset 白名单）
+6. 设置页“恢复默认”清掉 tab_font_family 键（reset 白名单）
+7. 验收通过后告知 Agent：delivery.json 转 accepted，004/008 卡转 done
 
 ## PR 材料（起草）
 

@@ -23,7 +23,7 @@ Status: review
 
 ## 人工观感验收清单（待用户执行）
 
-构建：`cargo build --release --locked -p nebula --bin pebrel --features gpui-shell`（产物 `../.target/release/pebrel.exe`）
+构建已就绪：`.target/.distribution/app/pebrel.exe`（同一次构建，与 004 卡合并验收）。
 
 1. 最大化窗口（非 F11）→ 关闭 → 重开：窗口仍为最大化，还原后尺寸正确
 2. 自定义位置/尺寸（非最大化）→ 关闭 → 重开：位置尺寸保持
@@ -32,6 +32,7 @@ Status: review
 5. 拔掉副屏后启动（若有多显示器）：窗口回主屏可见区
 6. quick terminal 尺寸行为不回归
 7. settings.txt 出现 `window_x/y/width/height/maximized` 五键且值随窗口变化更新
+8. 验收通过后告知 Agent：delivery.json 转 accepted、删除可能存在的 app-prev，004/008 卡转 done
 
 ## PR 材料（起草）
 
