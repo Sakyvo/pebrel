@@ -23,6 +23,7 @@
 
 ## 验证产物生命周期
 - 临时输出（check 日志等）当前命令结束删除
+- **debug 副本防混淆**：`cargo test` 会在 `.target/debug/` 产出 pebrel.exe（测试副产物，非产品）；验收/日用一律只用 `.distribution/app/pebrel.exe`，debug 副本用后即删
 - 工作证据按 task 保留最新通过/当前失败各一份，批次收尾删除
 - 稳定编译缓存 `.target/release|debug/` 不属于验证产物，不做常规 clean
 
